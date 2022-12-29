@@ -1,6 +1,6 @@
-using HailaQueue.Models;
+using EasyQueue.Models;
 
-namespace HailaQueue;
+namespace EasyQueue;
 
 public interface IQueueService
 {

@@ -1,4 +1,4 @@
-namespace HailaQueue;
+namespace EasyQueue;
 
 public interface IQueueListener
 {

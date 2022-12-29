@@ -1,4 +1,4 @@
-# HailaQueue
+# EasyQueue
 
 ## Redis / Quartz based queue processor
 

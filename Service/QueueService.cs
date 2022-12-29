@@ -1,7 +1,7 @@
-using HailaQueue.Models;
+using EasyQueue.Models;
 using StackExchange.Redis;
 
-namespace HailaQueue;
+namespace EasyQueue;
 
 public class QueueService : IQueueService
 {

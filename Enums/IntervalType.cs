@@ -1,4 +1,4 @@
-namespace HailaQueue.Enums;
+namespace EasyQueue.Enums;
 
 public enum IntervalType
 {

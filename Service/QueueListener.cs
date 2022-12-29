@@ -1,7 +1,7 @@
 using System.Text.Json;
 using StackExchange.Redis;
 
-namespace HailaQueue;
+namespace EasyQueue;
 
 public class QueueListener : IQueueListener
 {

@@ -1,6 +1,6 @@
-using HailaQueue.Enums;
+using EasyQueue.Enums;
 
-namespace HailaQueue.Models;
+namespace EasyQueue.Models;
 
 public class Process
 {
