@@ -3,7 +3,7 @@ using StackExchange.Redis;
 
 namespace HailaQueue;
 
-public class QueueListener
+public class QueueListener : IQueueListener
 {
     private List<string> channels = new();
 
