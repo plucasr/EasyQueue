@@ -1,9 +1,5 @@
 # HailaQueue
 
-## Requisites
+## Redis / Quartz based queue processor
 
-1. Runtime + SDK [Net 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) - (required).
-
-```bash
-dotnet --version
-```
+This package was created with the intetion of make it easier to use queues and processes on c# applications.

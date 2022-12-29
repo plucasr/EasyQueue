@@ -13,4 +13,8 @@
     <RepositoryUrl>https://github.com/plucasr/Haila.Queue</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.6.86" />
+  </ItemGroup>
+
 </Project>
