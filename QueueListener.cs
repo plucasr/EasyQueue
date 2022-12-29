@@ -19,7 +19,7 @@ public class QueueListener
     ///</sumary>
     public async Task Processor<ProcessorType>(
         string processorChannel,
-        Action<ProcessorType> action
+        Action<ProcessorType> onProcess
     )
     {
         if (channels.Contains(processorChannel))
@@ -33,7 +33,7 @@ public class QueueListener
                 var data = JsonSerializer.Deserialize<ProcessorType>(message.ToString());
                 if (data != null)
                 {
-                    action(data);
+                    onProcess(data);
                 }
             }
         );
@@ -43,7 +43,7 @@ public class QueueListener
     ///<sumary>
     /// JSON - Listener that receives the string processorChannel and the callback for handle the action
     ///</sumary>
-    public async Task Processor(string processorChannel, Action<string> action)
+    public async Task Processor(string processorChannel, Action<string> onProcess)
     {
         if (channels.Contains(processorChannel))
         {
@@ -53,7 +53,7 @@ public class QueueListener
             processorChannel,
             (channel, message) =>
             {
-                action(message.ToString());
+                onProcess(message.ToString());
             }
         );
         return;
