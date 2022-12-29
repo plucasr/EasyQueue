@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <PackageId>Haila.Queue</PackageId>
+    <PackageId>EasyQueue</PackageId>
     <Authors>Lucas.P</Authors>
     <Description>Cron based queue service using MongoDB / Redis / Quartz </Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

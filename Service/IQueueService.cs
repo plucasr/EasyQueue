@@ -1,8 +1,10 @@
+using HailaQueue.Models;
+
 namespace HailaQueue;
 
 public interface IQueueService
 {
-    void Add();
-    void Remove();
-    void Execute();
+    void Add(Process process);
+    void Remove(Process process);
+    void Remove(string slug);
 }

@@ -1,25 +1,33 @@
+using HailaQueue.Models;
+using StackExchange.Redis;
+
 namespace HailaQueue;
 
 public class QueueService : IQueueService
 {
-    public void Add()
+    private readonly ISubscriber _pubSub;
+    private readonly IDatabase _database;
+
+    public QueueService(ISubscriber pubSub, IDatabase database)
+    {
+        _pubSub = pubSub;
+        _database = database;
+    }
+
+    public void Add(Process process)
     {
         throw new NotImplementedException();
     }
 
-    public void Execute()
+    public void Remove(Process process)
     {
         throw new NotImplementedException();
     }
 
-    // TODO - SET SERILOG HERE
-    public void Init()
-    {
-        Console.WriteLine("Initializing QueueService");
-    }
-
-    public void Remove()
+    public void Remove(string slug)
     {
         throw new NotImplementedException();
     }
+
+    private void AddProcessInterval(Process process) { }
 }
