@@ -26,9 +26,12 @@ public class Process
     public string Body { get; set; } = "";
     public string BodyType { get; set; } = "";
     public IntervalType IntervalType { get; set; } = IntervalType.Minute;
+    public int IntervalTime { get; set; } = 1;
     public string ProcessorChannel { get; set; } = "";
     public DateTime LastUpdated { get; set; } = DateTime.Now;
     public QueueStatus Status { get; set; } = QueueStatus.ToProcess;
     public DateTime StartedAt { get; set; } = DateTime.Now;
     public DateTime EndedAt { get; set; } = DateTime.Now;
+    public bool Schedule { get; set; } = false;
+    public DateTime? ScheduledTo { get; set; }
 }

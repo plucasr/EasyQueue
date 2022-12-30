@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using EasyQueue.Models;
 using StackExchange.Redis;
 
@@ -15,9 +16,23 @@ public class QueueService : IQueueService
         _database = database;
     }
 
-    public void Add(Process process)
+    private void AddCronJob(Process process)
     {
-        throw new NotImplementedException();
+        // TODO - CREATE QUARTZ CRON SETUP HERE
+    }
+
+    public async void Add(Process process)
+    {
+        if (process.Schedule)
+        {
+            AddCronJob(process);
+        }
+        var json = System.Text.Json.JsonSerializer.Serialize(process);
+        await _database.StringSetAsync(process.Slug, json);
+        var data = await _database.StringGetAsync(
+            $"{process.IntervalType.ToString()}.{process.IntervalTime.ToString()}"
+        );
+        data.ToString();
     }
 
     public void Remove(Process process)
