@@ -1,10 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HailaQueue;
+namespace EasyQueue;
 
-public static class HailaQueueConfig
+public static class EasyQueueConfig
 {
-    public static IServiceCollection AddHailaQueue(this IServiceCollection services)
+    public static IServiceCollection AddEasyQueue(this IServiceCollection services)
     {
         services.AddSingleton<IQueueListener, QueueListener>();
         services.AddSingleton<IQueueService, QueueService>();

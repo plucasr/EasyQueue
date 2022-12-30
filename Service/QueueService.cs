@@ -1,3 +1,4 @@
+using System;
 using EasyQueue.Models;
 using StackExchange.Redis;
 
